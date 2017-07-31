@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="site/css/animate.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body id="main">
 
 <div class="mainwrap animated fadeIn">
 
@@ -45,7 +45,16 @@
 <script type="text/javascript" src="particles.js"></script>
 <script type="text/javascript" src="site/js/app.js"></script>
 <script type="text/javascript" src="site/js/type.js"></script>
+<script>
+  var src = $('#main').css('background-image');
+  var url = src.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
 
+  var img = new Image();
+  img.onload = function() {
+  }
+  img.src = url;
+  if (img.complete) img.onload();
+</script>
 
 </body>
 </html>
