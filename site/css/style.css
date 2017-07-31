@@ -11,7 +11,7 @@ html{
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body{
+#main{
   font:normal 75% Arial, Helvetica, sans-serif;
   background-image: url("../png/bg2.jpg");
 }
