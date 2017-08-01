@@ -17,10 +17,22 @@
   ga('create', 'UA-103729935-1', 'auto');
   ga('send', 'pageview');
   </script>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript">
+
+  jQuery(window).load(function() { 
+    jQuery("#status").fadeOut("slow"); 
+    jQuery("#loader").delay(500).fadeOut(); 
+  })
+  </script>
 </head>
 
 <body>
-<div class="mainwrap animated fadeIn">
+<div id="loader">
+  <div id="status"></div>
+</div>
+
+<div class="mainwrap animated fadeIn" id="preload">
 
   <ul class="nav animated fadeInDown">
     <li class="format hvr-und">About Me</li>
