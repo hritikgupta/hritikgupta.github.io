@@ -3,7 +3,6 @@ html,body{
 	height:100%; 
   padding: 0px;
   margin: 0px;
-  background-color: #CEE2FF;
 }
 
 html{
@@ -16,6 +15,10 @@ body{
 
 .first{
   background-image: url("../png/bg2.jpg");
+}
+
+.second{
+    background-color: #CEE2FF;
 }
 
 canvas{
