@@ -1,5 +1,5 @@
 var clength = 0;
-var caption = ['Hritik', 'Programmer', 'Open-Source lover', 'Developer',  'Dreamer', 'Thinker', 'Writer', 'Stubborn', 'Artist', 'Hritik'];
+var caption = ['Hritik', 'Programmer', 'Open-Source lover', 'Developer', 'Thinker', 'Writer', 'Stubborn', 'Entrepreneur', 'Artist', 'Hritik Gupta'];
 var j = 0;
 var flag = 1;
 
