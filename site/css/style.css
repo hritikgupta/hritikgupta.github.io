@@ -27,6 +27,10 @@ canvas{
   vertical-align:bottom;
 }
 
+.wra{
+  position: absolute;
+}
+
 .img-circle{
   height: 200px;
   border-radius: 50%;
