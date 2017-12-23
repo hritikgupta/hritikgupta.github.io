@@ -109,7 +109,6 @@
 @media screen and (max-width: 70em) {
 	.cbp-mc-column {
 		width: 50%;
-		margin-top: -5vw;
 	}
 	.cbp-mc-column:nth-child(3) {
 		width: 100%;
@@ -119,7 +118,6 @@
 @media screen and (max-width: 48em) {
 	.cbp-mc-column {
 		width: 100%;
-		padding: 7px;
-		margin-top: -10vw;
+		padding: 10px;
 	}
 }
