@@ -25,7 +25,7 @@
 					id: 'fh5co-mobile-menu-ul',
 					class: ''
 				});
-				var cloneLogo = $('#fh5co-logo').clone().attr({
+				var cloneLogo = $('.mobile').clone().attr({
 					id : 'fh5co-logo-mobile',
 					class : ''
 				});
