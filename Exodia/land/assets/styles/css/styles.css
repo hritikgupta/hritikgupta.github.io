@@ -855,8 +855,8 @@ height: auto;
     background-image: url(../../images/board-cloud-3.png); }
   .board.cloud-4 {
     opacity: 0.85;
-    background-image: url(../../images/board-cloud-4.png); }
-
+    /*background-image: url(../../images/board-cloud-4.png); */
+}
 .swing-1 {
   -webkit-animation: swing 4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
   -moz-animation: swing 4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
