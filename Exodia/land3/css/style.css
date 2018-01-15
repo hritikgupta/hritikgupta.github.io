@@ -25,10 +25,10 @@
     height:100%;
     width:100%; 
 }
+.sound{
+  display: none;
+}
 
-  .sound{
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=responsive.css.map */

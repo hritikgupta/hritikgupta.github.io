@@ -67,8 +67,8 @@
 
 	<div class="videoContainer">
         <div class="overlay"></div>
-        <video id="videoPlayer" autoplay loop>
-            <source src="https://drive.google.com/uc?export=download&id=1MeDvQAQKLHpRvsPYV6Fwv8e33hxHOnPW" type="video/mp4">
+        <video controls id="videoPlayer" autoplay loop>	
+            <source src="https://drive.google.com/uc?export=download&id=1RSygi_AN_6Y8_5cqWbO82q6t5dlewccs" type="video/mp4">
         </video>
     </div>
 
@@ -78,7 +78,7 @@
           <img src="exo_white.png" class="img-responsive logo"><br/>
 		   <img src="top.png" class="designer" style="filter: drop-shadow(1px 1px 5px black);">
         </h1>
-        <p style="font-family: 'Montserrat', sans-serif;" class="font-effect-scuffed-steel">Come witness the <span style="color: #1c2877">Mokhsa</span></p>
+        <p style="font-family: 'Montserrat', sans-serif;" class="font-effect-scuffed-steel">Come witness the <span style="color: #1c2877">Moksha</span></p>
       </div>
     </div>
 
@@ -181,6 +181,7 @@
   //  		  $('.overlay3').css('opacity', 0);
   // 	}
   $(video2).on('play', function(){
+  	console.log('ready');
     $('.overlay3').css('opacity', 0);
   });
 
