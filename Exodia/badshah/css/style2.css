@@ -28,7 +28,7 @@
 }
 .contact-form .input-block label {
   position: absolute;
-  left: 25px;
+ 
   top: 25px;
   display: block;
   margin: 0;
@@ -76,7 +76,7 @@
   border: none;
   width: 100%;
 }
-.contact-form .square-button:hover, .contact-form .square-button:focus {
+/*.contact-form .square-button:hover, .contact-form .square-button:focus {
   background-color: white;
 }
 
@@ -86,3 +86,4 @@
     margin: auto;
   }
 }
+*/
