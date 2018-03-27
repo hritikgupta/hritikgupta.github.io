@@ -17,6 +17,8 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
 	<link href="color/default.css" rel="stylesheet">
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
 </head>
 
 <body>
@@ -49,7 +51,7 @@
             }
 
           #fh5co-footer {
-            position: inherit;
+            /*position: inherit;*/
             border-top: 1px solid rgba(0, 0, 0, 0.08);
             padding: 3em 0;
           }
@@ -78,8 +80,10 @@
           }
           .fh5co-no-margin-bottom {
             margin-bottom: 0 !important;
+          } 
+          .g-recaptcha {
+              display: inline-block;
           }
-
 
 </style>
 
@@ -104,38 +108,43 @@
                     <div class="col-sm-12">
                       <div class="input-block">
                         <label for="">Name</label>
-                        <input type="text" class="form-control">
+                        <input type="text" name="name" class="form-control">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="input-block">
-                        <label for="">Last Name</label>
-                        <input type="text" class="form-control">
+                        <label for="">Email</label>
+                        <input type="text" name="email" class="form-control">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="input-block">
                         <label for="">Phone</label>
-                        <input type="text" class="form-control">
+                        <input pattern="[789][0-9]{9}" type="text" name="phone" class="form-control">
                       </div>
                     </div>
                     <div class="col-sm-12">
                       <div class="input-block">
                         <label for="">Link to your Github Profile</label>
-                        <input type="text" class="form-control">
+                        <input type="text" name="github" class="form-control">
                       </div>
                     </div>
                     <div class="col-sm-12">
                       <div class="input-block textarea">
                         <label for="">Drop your message to Badshah</label>
-                        <textarea rows="3" type="text" class="form-control"></textarea>
+                        <textarea rows="3" type="text" name="message" class="form-control"></textarea>
                       </div>
                     </div>
-                    <div class="col-sm-12">
+                    <div class="text-xs-center">
+                      <div class="g-recaptcha" data-sitekey="6Lf4Hk8UAAAAAF7uFX9R2srhT9aIegKTdl9zYYIP"></div> 
+                    </div>  
+                   <div class="col-sm-12">
                       <button class="square-button">Send</button>
-                    </div>
-                  </form>                
+                    </div>                       
+                  </form>  
+              
             </div>
+            
         </div>
 
     </section>
@@ -156,8 +165,6 @@
             <p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2018 <a href="#">Exodia</a>. All rights reserved.</p>
         </div>
     </footer>
-
-
 
 
     <script src="js/jquery.min.js"></script>
