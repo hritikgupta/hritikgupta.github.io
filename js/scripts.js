@@ -25,7 +25,7 @@ window.onload = function() {
     'I love to create things that make a difference.',
     'My curiosity always feeds to learning computer science and its diverse fields.',
     'You can contact me at <a href="mailto:b16097@students.iitmandi.ac.in">b16097@students.iitmandi.ac.in</a>',
-    '<a target="_blank" href="https://www.facebook.com/hritik.gupta.540">facebook.com/hritik.gupta.540</a><br><a target="_blank" href="https://www.linkedin.com/in/hritikgupta9/">linkedin.com/in/hritikgupta9/</a><br><a target="_blank" href="https://github.com/hritikgupta">github.com/hritikgupta</a>','<a href="#" style="font-weight:bold; text-decoration:none; color:black;"><i class="fa fa-file-pdf-o"></i>    Hritik Gupta.pdf</a>',
+    '<a target="_blank" href="https://www.facebook.com/hritik.gupta.540">facebook.com/hritik.gupta.540</a><br><a target="_blank" href="https://www.linkedin.com/in/hritikgupta9/">linkedin.com/in/hritikgupta9/</a><br><a target="_blank" href="https://github.com/hritikgupta">github.com/hritikgupta</a>','<a href="#" style="font-weight:bold; text-decoration:none; color:black;"><i class="fa fa-file-pdf-o"></i>    Hritik.pdf</a>',
     getCurrentTime(),
     '😄😄'
   ]
