@@ -209,9 +209,7 @@ html, body {
 }
 
 body {
-  /*font: 13px/21px "Open Sans", Arial, sans-serif;*/
-  font-family: 'Open Sans', sans-serif;
-
+  font: 13px/21px "Open Sans", Arial, sans-serif;
   color: #777777;
   background-color: white;
   overflow-x: hidden;

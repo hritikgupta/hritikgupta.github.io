@@ -8,14 +8,13 @@
     <meta charset="utf-8">
     <title>TouchVision</title>
 
-    <meta name="description" content="">
+    <meta name="description" content="Multisensory Inclusive Learning Platform for Visually Impaired Children">
     <meta name="viewport" content="width=device-width">
     <meta name="author" content="Hritik Gupta">
 
 
     <!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -29,10 +28,8 @@
 
 <style type="text/css">
     input#search{
-        background-color: rgba(255, 255, 255, 0.9);
-        font-family: 'Open Sans', sans-serif;
- 
-        /*font: 13px/21px "Open Sans", Arial, sans-serif;*/
+        background-color: rgba(255, 255, 255, 0.9); 
+        font: 13px/21px "Open Sans", Arial, sans-serif;
     }
     .show {
       display: block;
@@ -80,7 +77,7 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="top-header-left">
-                            <a href="#" title="Sign Up on TouchVision">Sign Up</a>
+                            <a href="#" aria-label="Sign Up on TouchVision">Sign Up</a>
                             <a href="#">Log In</a>
                             <a href="#" title="Suggest a book you want to read">Suggest a Book</a>
                         </div> <!-- /.top-header-left -->
@@ -88,10 +85,10 @@
                     <div class="col-md-6 col-sm-6">
                         <div class="social-icons">
                             <ul>
-                                <li><a href="#" class="fa fa-facebook" title="Visit TouchVision on Facebook"></a></li>
+                                <li><a href="#" class="fa fa-facebook" aria-label="Visit TouchVision on Facebook"></a></li>
                                 <!-- <li><a href="#" class="fa fa-dribbble"></a></li> -->
-                                <li><a href="#" class="fa fa-twitter" title="Visit TouchVision on Twitter"></a></li>
-                                <li><a href="#" class="fa fa-linkedin" title="Visit TouchVision on LinkedIn"></a></li>
+                                <li><a href="#" class="fa fa-twitter" aria-label="Visit TouchVision on Twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin" aria-label="Visit TouchVision on LinkedIn"></a></li>
                             </ul>
                             <div class="clearfix"></div>
                         </div> <!-- /.social-icons -->
@@ -110,7 +107,7 @@
                     <div class="col-md-8 col-sm-6 col-xs-4">
                         <div class="main-menu">
                             <a href="#" class="toggle-menu">
-                                <i class="fa fa-bars"></i>
+                                <i class="fa fa-bars" aria-label="Toggle main menu"></i>
                             </a>
                             <ul class="menu">
                                 <li><a href="#" title="Go to Home Page">Home</a></li>
@@ -144,7 +141,7 @@
                 </div> <!-- /.row -->
                 <div class="row">
                     <div class="col-md-12">
-                         <form class="navbar-form" style="padding: 5px;">
+                         <form role='search'class="navbar-form" style="padding: 5px;">
                             <div class="form-group" style="display:inline;">
                               <div class="input-group">
                                 <input type="text" class="form-control" type="search" id="search" placeholder="Search for a Book" >
@@ -161,17 +158,17 @@
     <div class="container">
         <p></p>
 
-        <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-black w3-left-align" style="font-weight: bold">Categories <i class="more-less glyphicon glyphicon-plus" style="float: right;"></i></button> 
+        <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-black w3-left-align" style="font-weight: bold" title="Show categories of Books">Categories<i class="more-less glyphicon glyphicon-plus" aria-hidden="false" style="float: right;"></i></button> 
         <div id="Demo1" class="w3-hide">
-            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('all')">Show All</a>
-            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('academic')">Academic</a>
-            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('action')">Action &amp; Adventure</a>
-            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('biography')">Biographies</a>
-            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('comic')">Comics</a>
-            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('crime')">Crime</a>
-            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('thriller')">Thriller</a>
-            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('fantasy')">Fantasy &amp; SciFi</a>
-            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('romance')">Romance</a>
+            <button class="w3-button w3-block w3-left-align" onclick="filterSelection('all')">Show All</button>
+            <button class="w3-button w3-block w3-left-align" onclick="filterSelection('academic')">Academic</button>
+            <button class="w3-button w3-block w3-left-align" onclick="filterSelection('action')">Action &amp; Adventure</button>
+            <button class="w3-button w3-block w3-left-align" onclick="filterSelection('biography')">Biographies</button>
+            <button class="w3-button w3-block w3-left-align" onclick="filterSelection('comic')">Comics</button>
+            <button class="w3-button w3-block w3-left-align" onclick="filterSelection('crime')">Crime</button>
+            <button class="w3-button w3-block w3-left-align" onclick="filterSelection('thriller')">Thriller</button>
+            <button class="w3-button w3-block w3-left-align" onclick="filterSelection('fantasy')">Fantasy &amp; SciFi</button>
+            <button class="w3-button w3-block w3-left-align" onclick="filterSelection('romance')">Romance</button>
         </div>
         <h3 id="showCat" style="margin-bottom: -1vw">Showing list of all books</h3>
     </div>
@@ -300,7 +297,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 section-title">
-                    <h2>New Arrivals</h2>
+                    <h2 aria-hidden="false">New Arrivals</h2>
                 </div> <!-- /.section -->
             </div> <!-- /.row -->
             <div class="row">
@@ -547,8 +544,8 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="footer-widget">
-                            <h3 class="widget-title">About Us</h3>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, debitis recusandae.
+                            <h3 class="widget-title" aria-hidden="false">About Us</h3>
+                            <p aria-hidden="false">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, debitis recusandae.</p>
                             <ul class="follow-us">
                                 <li><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
                                 <!-- <li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li> -->
@@ -558,10 +555,10 @@
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3">
                         <div class="footer-widget">
-                            <h3 class="widget-title">Why Choose Us?</h3>
-                            Tempore cum mollitia eveniet laboriosam corporis voluptas earum voluptate. Tempore cum mollitia eveniet laboriosam corporis.
-                            <br><br>Tempore cum mollitia eveniet laboriosam corporis voluptas earum voluptate. Lorem ipsum dolor sit amet.
-                            <br><br>Credit goes to google for all images.
+                            <h3 class="widget-title" aria-hidden="false">Why Choose Us?</h3>
+                            <p aria-hidden="false">Tempore cum mollitia eveniet laboriosam corporis voluptas earum voluptate. Tempore cum mollitia eveniet laboriosam corporis.</p>
+                            <p aria-hidden="false">Tempore cum mollitia eveniet laboriosam corporis voluptas earum voluptate. Lorem ipsum dolor sit amet.</p>
+                            <p aria-hidden="false">Credit goes to google for all images.</p>
                         </div> <!-- /.footer-widget -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-2">
@@ -611,12 +608,18 @@
         
       var x, i;
       x = document.getElementsByClassName("filterDiv");
-      if (c == "all") c = "";
+      var flag = 0;
+      if (c == "all"){
+        c = "";
+        var yoyo = document.getElementById('showCat').innerHTML = "Showing list of all books";
+        flag = 1;
+        // console.log("yoyoyo");
+      }
       for (i = 0; i < x.length; i++) {
         w3RemoveClass(x[i], "show");
         if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
       }
-      if(c!=''){        
+      if(c!='' && flag == 0){        
             var test = "Showing results for "+"\""+c+"\"";
             var yoyo = document.getElementById('showCat').innerHTML = test;
       }      // console.log(yoyo);
