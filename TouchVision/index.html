@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <html lang="en"><!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+    <title>TouchVision</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Hritik Gupta">
+
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/templatemo-misc.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+
+<style type="text/css">
+    input#search{
+        background-color: rgba(255, 255, 255, 0.9); 
+        font: 13px/21px "Open Sans", Arial, sans-serif;
+    }
+    .show {
+      display: block;
+    }
+    .filterDiv{
+        display: none;
+    }
+    input#search:focus, input#search:active{
+        outline:none;
+        background: white;
+      }
+    .w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap; font: 13px/21px "Open Sans", Arial, sans-serif; font-size: 1.3em;}
+    .w3-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+    .w3-button:disabled{cursor:not-allowed;opacity:0.3}.w3-disabled *,:disabled *{pointer-events:none}
+    .w3-dropdown-hover:hover > .w3-button:first-child,.w3-dropdown-click:hover > .w3-button:first-child{background-color:#ccc;color:#000}
+    .w3-bar-block .w3-dropdown-hover .w3-button,.w3-bar-block .w3-dropdown-click .w3-button{width:100%;text-align:left;padding:8px 16px}
+    .w3-button{white-space:normal}
+    @media (max-width:600px){.w3-modal-content{margin:0 10px;width:auto!important}.w3-modal{padding-top:30px}
+    .w3-dropdown-hover.w3-mobile .w3-dropdown-content,.w3-dropdown-click.w3-mobile .w3-dropdown-content{position:relative}  
+    .w3-hide-small{display:none!important}.w3-mobile{display:block;width:100%!important}.w3-bar-item.w3-mobile,.w3-dropdown-hover.w3-mobile,.w3-dropdown-click.w3-mobile{text-align:center}
+    .w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .w3-button{width:100%}}
+    /*.w3-button:hover{color:#000!important;background-color:#ccc!important}*/
+    .w3-block{display:block;width:100%}
+    .w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#2a80b9!important}
+    .w3-left-align{text-align:left!important}.w3-right-align{text-align:right!important}.w3-justify{text-align:justify!important}.w3-center{text-align:center!important}
+    .w3-hide{display:none!important}.w3-show-block,.w3-show{display:block!important}.w3-show-inline-block{display:inline-block!important}
+    @media (max-width:600px){.w3-modal-content{margin:0 10px;width:auto!important}.w3-modal{padding-top:30px}
+    .w3-dropdown-hover.w3-mobile .w3-dropdown-content,.w3-dropdown-click.w3-mobile .w3-dropdown-content{position:relative}  
+    .w3-hide-small{display:none!important}.w3-mobile{display:block;width:100%!important}.w3-bar-item.w3-mobile,.w3-dropdown-hover.w3-mobile,.w3-dropdown-click.w3-mobile{text-align:center}
+    .w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .w3-button{width:100%}}
+    @media (max-width:768px){.w3-modal-content{width:500px}.w3-modal{padding-top:50px}}
+    @media (min-width:993px){.w3-modal-content{width:900px}.w3-hide-large{display:none!important}.w3-sidebar.w3-collapse{display:block!important}}
+    @media (max-width:992px) and (min-width:601px){.w3-hide-medium{display:none!important}}
+</style>
+
+<body>
+    <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    
+    <header class="site-header">
+        <div class="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="top-header-left">
+                            <a href="#" title="Sign Up on TouchVision">Sign Up</a>
+                            <a href="#">Log In</a>
+                            <a href="#" title="Suggest a book you want to read">Suggest a Book</a>
+                        </div> <!-- /.top-header-left -->
+                    </div> <!-- /.col-md-6 -->
+                    <div class="col-md-6 col-sm-6">
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="#" class="fa fa-facebook" title="Visit TouchVision on Facebook"></a></li>
+                                <!-- <li><a href="#" class="fa fa-dribbble"></a></li> -->
+                                <li><a href="#" class="fa fa-twitter" title="Visit TouchVision on Twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin" title="Visit TouchVision on LinkedIn"></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div> <!-- /.social-icons -->
+                    </div> <!-- /.col-md-6 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.top-header -->
+        <div class="main-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-8">
+                        <div class="logo">
+                            <h1><a href="#">Touch Vision</a></h1>
+                        </div> <!-- /.logo -->
+                    </div> <!-- /.col-md-4 -->
+                    <div class="col-md-8 col-sm-6 col-xs-4">
+                        <div class="main-menu">
+                            <a href="#" class="toggle-menu">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            <ul class="menu">
+                                <li><a href="#" title="Go to Home Page">Home</a></li>
+                                <li><a href="#">Catalogs</a></li>
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Policies</a></li>
+                                <li><a href="#">About</a></li>
+                            </ul>
+                        </div> <!-- /.main-menu -->
+                    </div> <!-- /.col-md-8 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.main-header -->
+        <div class="main-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-7">
+                        <div class="list-menu">
+                            <ul>
+                                <li><a href="index.html">Explore</a></li>
+                                <li><a href="product-detail.html">Details</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div> <!-- /.list-menu -->
+                    </div> <!-- /.col-md-6 -->
+                    <div class="col-md-6 col-sm-5">
+                        <div class="notification">
+                            <span>** Random Notifications **</span>
+                        </div>
+                    </div> <!-- /.col-md-6 -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-12">
+                         <form class="navbar-form" style="padding: 5px;">
+                            <div class="form-group" style="display:inline;">
+                              <div class="input-group">
+                                <input type="text" class="form-control" type="search" id="search" placeholder="Search for a Book" >
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-search" ></span></span>
+                              </div>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+            </div> <!-- /.container -->
+        </div> <!-- /.main-nav -->
+    </header> <!-- /.site-header -->
+
+    <div class="container">
+        <p></p>
+
+        <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-black w3-left-align" style="font-weight: bold">Categories <i class="more-less glyphicon glyphicon-plus" style="float: right;"></i></button> 
+        <div id="Demo1" class="w3-hide">
+            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('all')">Show All</a>
+            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('academic')">Academic</a>
+            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('action')">Action &amp; Adventure</a>
+            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('biography')">Biographies</a>
+            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('comic')">Comics</a>
+            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('crime')">Crime</a>
+            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('thriller')">Thriller</a>
+            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('fantasy')">Fantasy &amp; SciFi</a>
+            <a class="w3-button w3-block w3-left-align" onclick="filterSelection('romance')">Romance</a>
+        </div>
+        <h3 id="showCat" style="margin-bottom: -1vw">Showing list of all books</h3>
+    </div>
+
+    <div class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 filterDiv action">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/9.jpg" alt="Journey to the Center of The Earth">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">Journey to the center of the Earth</a></h5>
+                            <span class="tagline">Vintage Verne</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> 
+                    </div> <!-- /.product-item -->
+                </div> <!-- /.col-md-3 -->
+                <div class="col-md-2 filterDiv biography">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/10.jpg" alt="Of thee I sing">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">Of Thee I Sing</a></h5>
+                            <span class="tagline">Barack Obama</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> 
+                    </div> <!-- /.product-item -->
+                </div> 
+                <div class="col-md-2 filterDiv comic">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/11.jpg" alt="The Dangers of Street Food">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">The Dangers of Street Food</a></h5>
+                            <span class="tagline">Dr. Seus</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> 
+                    </div> <!-- /.product-item -->
+                </div> 
+                <div class="col-md-2 filterDiv thriller">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/12.jpg" alt="harry potter and the Philosopher's stone">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">Harry Potter and the Philosopher's Stone</a></h5>
+                            <span class="tagline">JK Rowling</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> 
+                    </div> <!-- /.product-item -->
+                </div> 
+                <div class="col-md-2 filterDiv thriller">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/13.jpg" alt="Harry Potter and the Order of the Phoenix">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">Harry Potter and the Order of the Phoenix</a></h5>
+                            <span class="tagline">JK Rowling</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> 
+                    </div> <!-- /.product-item -->
+                </div> 
+                <div class="col-md-2 filterDiv crime">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/14.jpg" alt="it">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">It</a></h5>
+                            <span class="tagline">Stephen King</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> 
+                    </div> <!-- /.product-item -->
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-md-2 filterDiv academic">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/15.jpg" alt="life of pi">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">Life of Pi</a></h5>
+                            <span class="tagline">Yann Martel</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> 
+                    </div> <!-- /.product-item -->
+                </div> 
+                <div class="col-md-2 filterDiv romance">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/16.jpg" alt="the time machine">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">The Time Machine</a></h5>
+                            <span class="tagline">HG Wells</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> 
+                    </div> <!-- /.product-item -->
+                </div> 
+                <div class="col-md-2 filterDiv fantasy">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/17.jpg" alt="Princess Academy">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">Princess Academy</a></h5>
+                            <span class="tagline">Shannon Hale</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> 
+                    </div> <!-- /.product-item -->
+                </div> 
+                 <!-- <div class="col-md-2"></div> -->
+                 <!-- <div class="col-md-2"></div> -->
+            </div> <!-- /.row -->
+                
+        </div> <!-- /.container -->
+    </div> <!-- /.content-section -->
+
+    <div class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 section-title">
+                    <h2>New Arrivals</h2>
+                </div> <!-- /.section -->
+            </div> <!-- /.row -->
+            <div class="row">
+                <div class="col-md-2 col-sm-6">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/1.jpg" alt="to Kill a Mocking Bird">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">To Kill A Mocking Bird</a></h5>
+                            <span class="tagline">Harper Lee</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> <!-- /.product-content -->
+                    </div> <!-- /.product-item -->
+                </div> <!-- /.col-md-3 -->
+                <div class="col-md-2 col-sm-6">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/6.jpg" alt="the Fault in our Stars">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">The Fault in Our Stars</a></h5>
+                            <span class="tagline">John Green</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> <!-- /.product-content -->
+                    </div> <!-- /.product-item -->
+                </div> <!-- /.col-md-3 --><!-- /.col-md-3 -->
+                <div class="col-md-2 col-sm-6">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/7.jpg" alt="the Godfather">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">The Godfather</a></h5>
+                            <span class="tagline">Mario Puzo</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> <!-- /.product-content -->
+                    </div> <!-- /.product-item -->
+                </div> <!-- /.col-md-3 -->
+                <div class="col-md-2 col-sm-6">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/8.jpg" alt="Fifty Shades of Grey">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">Fifty Shades of Grey</a></h5>
+                            <span class="tagline">EL James</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> <!-- /.product-content -->
+                    </div> <!-- /.product-item -->
+                </div> <!-- /.col-md-3 -->
+                <div class="col-md-2 col-sm-6">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/5.jpeg" alt="Fahrenheit 451">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">Fahrenheit 451</a></h5>
+                            <span class="tagline">Ray Bradbury</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> <!-- /.product-content -->
+                    </div> <!-- /.product-item -->
+                </div> <!-- /.col-md-3 -->
+                <div class="col-md-2 col-sm-6">
+                    <div class="product-item">
+                        <div class="product-thumb">
+                            <img src="images/books/6.jpg" alt="the Fault in our Stars">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">The Fault in our Stars</a></h5>
+                            <span class="tagline">John Green</span><p></p>
+                            <button class="main-btn">Download</button>
+                        </div> <!-- /.product-content -->
+                    </div> <!-- /.product-item -->
+                </div> <!-- /.col-md-3 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /.content-section -->
+
+
+    
+
+    
+    <div class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 section-title">
+                    <h2>Vote For Upcoming Books</h2>
+                </div> <!-- /.section -->
+            </div> <!-- /.row -->
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-item-vote">
+                        <div class="product-thumb">
+                            <img src="images/products/1.jpg" alt="">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">Name of Shirt</a></h5>
+                            <span class="tagline">By: Catherine</span>
+                            <ul class="progess-bars">
+                                <li>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                        <span>4<i class="fa fa-heart"></i></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="progress">
+                                        <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                        <span class="comments">6<i class="fa fa-heart"></i></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- /.product-content -->
+                    </div> <!-- /.product-item-vote -->
+                </div> <!-- /.col-md-3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-item-vote">
+                        <div class="product-thumb">
+                            <img src="images/products/2.jpg" alt="">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">Name of Shirt</a></h5>
+                            <span class="tagline">By: Rebecca</span>
+                            <ul class="progess-bars">
+                                <li>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                        <span>4<i class="fa fa-heart"></i></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="progress">
+                                        <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                        <span class="comments">6<i class="fa fa-heart"></i></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- /.product-content -->
+                    </div> <!-- /.product-item-vote -->
+                </div> <!-- /.col-md-3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-item-vote">
+                        <div class="product-thumb">
+                            <img src="images/products/3.jpg" alt="">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">Name of Shirt</a></h5>
+                            <span class="tagline">By: Catherine</span>
+                            <ul class="progess-bars">
+                                <li>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                        <span>4<i class="fa fa-heart"></i></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="progress">
+                                        <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                        <span class="comments">6<i class="fa fa-heart"></i></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- /.product-content -->
+                    </div> <!-- /.product-item-vote -->
+                </div> <!-- /.col-md-3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-item-vote">
+                        <div class="product-thumb">
+                            <img src="images/products/4.jpg" alt="">
+                        </div> <!-- /.product-thum -->
+                        <div class="product-content">
+                            <h5><a href="#">Name of Shirt</a></h5>
+                            <span class="tagline">By: Rebecca</span>
+                            <ul class="progess-bars">
+                                <li>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                        <span>4<i class="fa fa-heart"></i></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="progress">
+                                        <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                        <span class="comments">6<i class="fa fa-heart"></i></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- /.product-content -->
+                    </div> <!-- /.product-item-vote -->
+                </div> <!-- /.col-md-3 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /.content-section -->
+
+    <footer class="site-footer">
+        <div class="our-partner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="customNavigation">
+                            <a class="btn prev"><i class="fa fa-angle-left"></i></a>
+                            <a class="btn next"><i class="fa fa-angle-right"></i></a>
+                        </div>
+                        <div id="owl-demo" class="owl-carousel">
+                            <div class="item"> 
+                                <a href="#"><img src="images/tm-170x80-1.jpg" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="images/tm-170x80-2.jpg" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="images/tm-170x80-1.jpg" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="images/tm-170x80-2.jpg" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="images/tm-170x80-1.jpg" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="images/tm-170x80-2.jpg" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="images/tm-170x80-1.jpg" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="images/tm-170x80-2.jpg" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="images/tm-170x80-1.jpg" alt=""></a>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="images/tm-170x80-2.jpg" alt=""></a>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+            </div> 
+        </div> 
+
+        <div class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="footer-widget">
+                            <h3 class="widget-title">About Us</h3>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, debitis recusandae.
+                            <ul class="follow-us">
+                                <li><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
+                                <!-- <li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li> -->
+                                <li><a href="#"><i class="fa fa-linkedin"></i>LinkedIn</a></li>
+                            </ul> <!-- /.follow-us -->
+                        </div> <!-- /.footer-widget -->
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3">
+                        <div class="footer-widget">
+                            <h3 class="widget-title">Why Choose Us?</h3>
+                            Tempore cum mollitia eveniet laboriosam corporis voluptas earum voluptate. Tempore cum mollitia eveniet laboriosam corporis.
+                            <br><br>Tempore cum mollitia eveniet laboriosam corporis voluptas earum voluptate. Lorem ipsum dolor sit amet.
+                            <br><br>Credit goes to google for all images.
+                        </div> <!-- /.footer-widget -->
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-2">
+                        <div class="footer-widget">
+                            <h3 class="widget-title">Useful Links</h3>
+                            <ul>
+                                <li><a href="#">Our Shop</a></li>
+                                <li><a href="#">Partners</a></li>
+                                <!-- <li><a href="#">Gift Cards</a></li> -->
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div> <!-- /.footer-widget -->
+                    </div> <!-- /.col-md-2 -->
+                    <div class="col-md-4">
+                        <div class="footer-widget">
+                            <h3 class="widget-title">Our Newsletter</h3>
+                            <div class="newsletter">
+                                <form action="#" method="get">
+                                    <p>Sign up for our regular updates to know when new books are released.</p>
+                                    <input type="text" title="Email" name="email" placeholder="Your Email Here">
+                                    <input type="submit" class="s-button" value="Submit" name="Submit">
+                                </form>
+                            </div> <!-- /.newsletter -->
+                        </div> <!-- /.footer-widget -->
+                    </div> <!-- /.col-md-4 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.main-footer -->
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span>Copyright &copy; 2084 <a href="#">TouchVision</a></span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, expedita soluta mollitia accusamus ut architecto maiores cum fugiat. Pariatur ipsum officiis fuga deleniti alias quia nostrum veritatis enim doloremque eligendi?</p>
+                    </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.bottom-footer -->
+    </footer> <!-- /.site-footer -->
+
+    <script>
+    filterSelection("all")
+    function filterSelection(c) {
+        var temp = document.getElementById('Demo1');     
+        temp.className = temp.className.replace(" w3-show", "");
+        
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+      if(c!=''){        
+            var test = "Showing results for "+"\""+c+"\"";
+            var yoyo = document.getElementById('showCat').innerHTML = test;
+      }      // console.log(yoyo);
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("Demo1");
+    var btns = btnContainer.getElementsByClassName("w3-button");
+    console.log(btns);
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+
+    <script>
+    function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else { 
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+    </script>
+    <script src="js/vendor/jquery-1.10.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="js/jquery.easing-1.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>
