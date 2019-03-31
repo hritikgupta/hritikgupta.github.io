@@ -58,18 +58,30 @@
       <div id="content">
         <!-- insert the page content here -->
         <h1>Programming Assignment-1</h1>
-        <p>Data Management - Line Dataset Generation : Make a dataset of (28 × 28 × 3) images of straight lines on a black background with the
-given variations:</p>
-        <p>Computational Graph Usage - Gravity Simulator : Given masses and initial positions & velocities of 100 particles, you are required to find the final
+        <p>Task 1 : Data Management - Line Dataset Generation : Make a dataset of (28 × 28 × 3) images of straight lines on a black background with the
+given variations</p>
+        <p>Task 2 : Computational Graph Usage - Gravity Simulator : Given masses and initial positions & velocities of 100 particles, you are required to find the final
 positions and velocities of particles when the minimum distance between any pair of particles
 falls below a given threshold. The only working forces are Newtonian Gravitational Forces, in
 a two-dimensional rectangular coordinate system.</p>
-        <p> Layer API - A Simple Neural Network : You are required to make a simple fully connected network to classify the MNIST dataset and
+        <p>Task 3:  Layer API - A Simple Neural Network : You are required to make a simple fully connected network to classify the MNIST dataset and
 the dataset you made in part 1. The caveat here is that you can not use layer APIs already
 provided in your library of choice. You will need to code a dense layer API as exhaustive as
 possible using in-built operations for matrix multiplication, etc. Refer to the Tensorflow Dense
 Layer API, for reference.</p>
     <p> <a href="https://github.com/hritikgupta/DeepLearning/tree/master/Assignment%201" target="_blank">Link</a> to the assignment </p>
+  <hr>
+
+  <h1>Programming Assignment-2</h1>
+        <p>Task 1 : Making a CNN model from scratch to classify the images of the line dataset into the respective 96 classes and MNIST dataset into 10 classes.</p>
+        <p>Task 2: Design a non-sequential convolutional neural network for classifying the line dataset. This network will have 4 outputs based on the 4 kind of variations (length, width, color, angle). It is required to divide the network architecture into two parts a) Feature network and b) Classification heads. The feature network will be responsible for extracting the required
+features from the input and attached to it would be the four classification heads one for each
+variation. The first 3 classification heads are for 2 class problems namely length, width and color
+classification. In all these the final layer contains a single neuron with a sigmoid activation
+followed by binary crossentropy loss.
+The last classification head is a 12 class problem for each 12 angles of variation. In this the
+final layer contains 12 neurons with softmax activation and Categorical Cross entropy loss.</p>
+    <p> <a href="https://github.com/hritikgupta/DeepLearning/tree/master/Assignment%202" target="_blank">Link</a> to the assignment </p>
   <hr>
 <!--         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.</p>
