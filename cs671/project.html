@@ -61,12 +61,30 @@
       	<br/>      	<br/>
       	<p>Autism spectrum disorder (ASD) is characterized by qualitative impairment in social reciprocity, and by repetitive, restricted, and stereotyped behaviors/interests.</p>
       	<p>ASD is recognized to occur in more than 1% of children. Despite continuing research advances, their pace and clinical impact have not kept up with the urgency to identify ways of determining the diagnosis at earlier ages, selecting optimal treatments, and predicting outcomes. For the most part this is due to the complexity and heterogeneity of ASD.</p>
-      	<p>PROBLEM STATEMENT : Applying Deep Learning to identify Autism Spectrum Disorder (ASD) patients from large brain imaging dataset</p>
+      	<p>PROBLEM STATEMENT : Autism Classification on rs-FMRI</p>
+      	<p>Resting state fMRI (rsfMRI or R-fMRI) is a method of functional magnetic resonance imaging (fMRI) that is used in brain mapping to evaluate regional interactions that occur in a resting or task-negative state, when an explicit task is not being performed. A number of resting-state conditions are identified in the brain, one of which is the default mode network.</p>
 
+      	
+      	<p>The interim project presentation is as below:</p>
       	<center><iframe width="560" height="315" src="https://www.youtube.com/embed/PavfGJx70no" frameborder="0"  allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
 
       	<br/><br/><br/>
-      	<p>PROJECT PRESENTATION SLIDES : <a href="Autism_ppt.pdf" download>Here</a></p>
+      	<p>The presentation slides can be found <a href="Autism_ppt.pdf" download>here</a>.</p>
+
+      	<b>Implementation Strategies</b>
+      	<ul>
+      		<li>Classification on components obtained via GIFT ICA ~ 3D CNN/AutoEncoder</li>
+      		<li>Averaging out 4D Data in time and perform classification to exploit the usefulness of spatial information for classification ~ 3D CNN/AutoEncoder</li>
+      		<li>Classification on MRI Anatomical 3D Data after performing registration</li>
+      		<li><i>*New Approach</i>: AutoEncoder + GRU/LSTM : Encoding the 4D rs-fMRI into a single-vector representation through which we learn the temporal information via GRU/LSTM
+      	</ul>
+
+      	<p>The final project presentation, as below, discusses all the implementations, performances obtained and justifications :</p>
+		<center><iframe width="560" height="315" src="https://www.youtube.com/embed/PavfGJx70no" frameborder="0"  allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+
+		<br>
+	    <p>The final presentation slides can be found <a href="DLPresentation.pdf" download>here</a>. The activation outputs can be found <a href="Activation_outputs.pdf" download>here</a>.</p>
+
         <!-- insert the page content here -->
 
 <!--         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.</p>
