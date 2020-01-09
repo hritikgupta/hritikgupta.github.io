@@ -121,7 +121,7 @@ tempElement.addEventListener("click", function(){
 
 // Weather by City Name
 function WeatherbyCity(city){
-    let api = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
+    let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
     
     fetch(api)
         .then(function(response){
